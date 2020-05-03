@@ -39,7 +39,7 @@ func run() {
 		Angle:        90.0,
 		Radius:       2.5 * Unit,
 		Buttons:      [5]pixelgl.Button{pixelgl.KeyW, pixelgl.KeyS, pixelgl.KeyA, pixelgl.KeyD, pixelgl.KeySpace},
-		Speed:        2 * Unit,
+		Speed:        0.5 * Unit,
 		AngularSpeed: 2.0,
 		ReloadTime:   600,
 		ReloadSpeed:  10,
@@ -47,7 +47,7 @@ func run() {
 	for !win.Closed() {
 		win.Clear(color.RGBA{A: 0xff, R: 0xc8, G: 0xc8, B: 0xc8})
 		t.update(win)
-		t.draw(win, Unit)
+		t.draw(win)
 		win.Update()
 	}
 }
